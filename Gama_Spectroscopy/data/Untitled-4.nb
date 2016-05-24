@@ -1,0 +1,205 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      7546,        195]
+NotebookOptionsPosition[      6995,        171]
+NotebookOutlinePosition[      7336,        186]
+CellTagsIndexPosition[      7293,        183]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"time", " ", "=", " ", 
+    RowBox[{"Accumulate", "[", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "23.13", ",", "24.05", ",", "24.6", ",", "26.41", ",", 
+       "26.46", ",", "42.37", ",", "27.89", ",", "23.22", ",", "26.96", ",", 
+       "21.97", ",", "25.78", ",", "30.92", ",", "27.16", ",", "23.6", ",", 
+       "34.67"}], "}"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"counts", " ", "=", " ", 
+   RowBox[{"Log", "[", 
+    RowBox[{"{", 
+     RowBox[{
+     "8781", ",", "7960", ",", "7201", ",", "6479", ",", "5610", ",", "5023", 
+      ",", "4051", ",", "3598", ",", "3416", ",", "2829", ",", "2640", ",", 
+      "2396", ",", "2172", ",", "1856", ",", "1603", ",", "1466"}], "}"}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"data", " ", "=", " ", 
+    RowBox[{"Transpose", "[", 
+     RowBox[{"{", 
+      RowBox[{"time", ",", "counts"}], "}"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"f", " ", "=", " ", 
+  RowBox[{"Fit", "[", 
+   RowBox[{"data", ",", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "x"}], "}"}], ",", "x"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"p1", " ", "=", " ", 
+   RowBox[{"ListPlot", "[", "data", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Show", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{"f", ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "410"}], "}"}], ",", 
+     RowBox[{"AxesLabel", " ", "\[Rule]", " ", 
+      RowBox[{"{", 
+       RowBox[{"\"\<Time (s)\>\"", ",", "\"\<Log Counts\>\""}], "}"}]}], ",", 
+     RowBox[{"PlotLabel", " ", "\[Rule]", " ", "\"\<Ba-137 Decay\>\""}]}], 
+    "]"}], ",", "p1"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6406333530016894`*^9, 3.6406335731642723`*^9}, {
+   3.640633610397171*^9, 3.6406336231450214`*^9}, {3.6406338062902117`*^9, 
+   3.640633814168827*^9}, 3.6406339004166684`*^9, {3.6406339608024793`*^9, 
+   3.6406339759975595`*^9}, {3.6406342644967422`*^9, 3.64063438510631*^9}, {
+   3.6406344218853216`*^9, 3.640634426309125*^9}, 3.64063455025674*^9}],
+
+Cell[BoxData[
+ RowBox[{"9.076975747950256`", "\[VeryThinSpace]", "-", 
+  RowBox[{"0.004437874204435571`", " ", "x"}]}]], "Output",
+ CellChangeTimes->{3.6406346490506306`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{"\"\<BaDecay.eps\>\"", ",", 
+   GraphicsBox[{{{}, {}, 
+      {Hue[0.67, 0.6, 0.6], LineBox[CompressedData["
+1:eJwVzXs01HkABfBZx+ZReVdDvjO/3xS1hFrGq+TKeDYs8igpk6LBigaNX0m1
+YWujtgfWLko5JWTppaUUG0l5T1uRXWor8qhYr5J2+uOeez5/3HPpkGifUAUW
+i+Uhz5cmugvEZmm9q10WOASFL+GhSKlusIJ9x/7kdpEVJXeiVZjsFLvV/p+K
+fVqPDXkIbbF0PcjusU9YX90gkHvDQu4Pu9nv7AuzV/IpAx7WOWhzd7FZUNG3
+VHvM48HLN30olq2BB5TxHQGHh5ZNjTIJm4Kn0bzF1Dwe0iwKbt6qW46MtoJv
+PL7iwU5Xx8B+wBp0fl5S4zCNj3+l9g7EAjnbG+4VPKPh757/prtBAP/aS55j
+DTSsTWRJzR2uCHD6tDjzOg32H4ubtvE9kBmkbHPpLI0kNbLRscYLdRGODvQx
+GuaT5hkdtT6wye/75WUiDfH1DSXX3/piMNLNlAqnISqZrZI94Y9Xm3W0i/1p
+BKpR5g5j69Hsqj54QkCjQ+Bou4qzEeP1dQrvl9NQvzKSasnbhK1Rr8SnOTQa
+x8rKDnoHQ6Owds5dVRqC9r51a6tEKHnaXOA0QSHZyV7iW7UF6eZOaQteUlBc
+RD7PagtBKS0tD26jEKZfY2oj2woda23DyWoKSvsHH+oMbUPV84gns4opXNS9
+793BCoNX8kiSJIuCSUsko6mwHUae/8aZplB4N5yhPsUWQ1ByvFC0k0KGUaqr
+iISj4NuLxi82U1iZs0RcpB+B0d/fna0VUqATvMZzV0TiQM1oANuGQl+0/RJN
+i+/h91EUVG1I4W3btXoTYRTE9w/ndWpRmAjvFpoE74BMv+7ihRkuesiD+JLg
+aGybcL9m28mFIudM6hvbGMR+cFlVeZkLlapb56pvxkDNUzekM50LtVFzC8VV
+O5FyzD3majgX5j1Dezj1O5E4NTK1ew0Xbl2qGZPOEsxcieY9J1zsOxIZeqFd
+AlbW1nr+OAfn3cyU5vvFIr3RWMWojYOms2v1x2WxmBhYZ/GkhAOd8uK+ouA4
+9PBHOyUpHAibdqRye+Pg1xpGlYo4KMiL7xJHxcPtpHfvI2sOplUfnVs0EQ89
+Qc5PFZocOKVk2eVJd0HqVNVuM0RQejX36JCCFD7R3pmFdQRKI7PKp5OlqOyv
+mqw4Q7ClscF5r2ICZrxTHQ8kEnQFNJ9sP5qA2uf3VKz8CJxHLS+/Vmegebd7
+R/pyAr3P7tpLtRis4Kyp7DcjGFYNjhPrMPBOOP+1s9yZvB8t+9kMji+Lzpkx
+IXjt/bjyDc1AI4PVGG1McKhM+ueQudxhiwx8DAnuR92QjQYwUFMO75qvT5DH
+PORbBDIwDWkyjF1IIEnpyYwLYuB5c4WkRU/+n6u8YUzE4GjMB+VDugQRD9d3
+j4fL90+PWE7NJ1A1nno5tYfB3KLS412aBH9bznWxTWJgoqjdbSX35TV04e79
+DDw2S5ee0iAIDHSL+JjMIE0Lt4XqBMWHs4en0xnM2dM2eGsOwf6MS9/Z/cxg
+2SO+tZ7cvvk1ZXtPMBCa/Xpw12yC6Rv9kplM+f5FiJ6ZKkHr3U8dq7MZlNjd
+Cz2iQlDQqsnf9xuDB1nG5a+VCRKeGWTezmUw8P7YtKPcwj6bic+nGcwW/udy
+RongfxW0DNA=
+        "]]}}, {{}, 
+      {Hue[0.67, 0.6, 0.6], 
+       PointBox[{{0., 9.080345575359996}, {23.13, 8.982184278838428}, {47.18, 
+        8.881975184248867}, {71.78, 8.776321456449958}, {98.19, 
+        8.632305998516742}, {124.65, 8.521782643750045}, {167.02, 
+        8.30671904320269}, {194.91000000000003`, 8.188133414510478}, {
+        218.13000000000002`, 8.13622555490846}, {245.09000000000003`, 
+        7.947678571301568}, {267.06000000000006`, 7.878534196140362}, {
+        292.84000000000003`, 7.78155595923534}, {323.76000000000005`, 
+        7.683403681053826}, {350.9200000000001, 7.526178913346146}, {
+        374.5200000000001, 7.3796321526095525`}, {409.1900000000001, 
+        7.290292882446597}}]}, {}}},
+    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+    Axes->True,
+    AxesLabel->{
+      FormBox["\"Time (s)\"", TraditionalForm], 
+      FormBox["\"Log Counts\"", TraditionalForm]},
+    AxesOrigin->{0, 7.300000000000001},
+    PlotLabel->FormBox["\"Ba-137 Decay\"", TraditionalForm],
+    PlotRange->{{0, 410}, {7.257447361264904, 9.076975710817022}},
+    PlotRangeClipping->True,
+    PlotRangePadding->{
+      Scaled[0.02], 
+      Scaled[0.02]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.640634651299726*^9, 3.640634665554631*^9}}],
+
+Cell[BoxData["\<\"BaDecay.eps\"\>"], "Output",
+ CellChangeTimes->{3.640634666023405*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Solve", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"9.076975747950256`", "\[VeryThinSpace]", "-", 
+     RowBox[{"0.004437874204435571`", " ", "x"}]}], "\[Equal]", 
+    RowBox[{"Log", "[", 
+     RowBox[{".5", "*", "8781"}], "]"}]}], ",", "x"}], "]"}]], "Input",
+ CellChangeTimes->{{3.640634594409971*^9, 3.6406346340563507`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"x", "\[Rule]", "155.42967677199726`"}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.6406335736293693`*^9, {3.6406336176080866`*^9, 3.64063362368408*^9}, {
+   3.6406338083054323`*^9, 3.6406338147409067`*^9}, 3.6406339010757756`*^9, {
+   3.640633963347644*^9, 3.6406339762885656`*^9}, {3.640634306010128*^9, 
+   3.6406343258859987`*^9}, 3.6406344269248753`*^9, 3.640634550560545*^9, 
+   3.6406346347282567`*^9}]
+}, Open  ]]
+},
+WindowSize->{933, 943},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (October 6, 2011)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 2148, 52, 192, "Input"],
+Cell[2730, 76, 174, 3, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2941, 84, 3086, 57, 77, InheritFromParent],
+Cell[6030, 143, 88, 1, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6155, 149, 350, 8, 31, InheritFromParent],
+Cell[6508, 159, 471, 9, 30, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
